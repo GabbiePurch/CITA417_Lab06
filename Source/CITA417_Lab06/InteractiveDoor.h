@@ -3,14 +3,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "InteractableTarget.h"
 #include "InteractiveDoor.generated.h"
 
 UCLASS()
-class CITA417_LAB06_API AInteractiveDoor : public AActor
+class CITA417_LAB06_API AInteractiveDoor
+    : public AActor, public IInteractableTarget
 {
     GENERATED_BODY()
 
 public:
+
+    virtual void ActivateTarget_Implementation() override;
+
     AInteractiveDoor();
 
     UFUNCTION(BlueprintCallable, Category = "Door")

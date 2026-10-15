@@ -76,3 +76,11 @@ void AInteractiveDoor::CloseDoor()
     }
 }
 
+
+void AInteractiveDoor::ActivateTarget_Implementation()
+{
+    UE_LOG(LogTemp, Warning,
+        TEXT("Interactive Door received interface activation!"));
+
+    OpenDoor();
+}
